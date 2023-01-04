@@ -7,8 +7,7 @@
 .conteiner{
     background-color:#202124;
     width: 100%;
-    height: 100px;
-    color:#e8eaed;
+    height: 100px;  
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,23 +28,39 @@
   color: #e8eaed;
   font-size: 30px;
   font-family: 'Anton', sans-serif;
-  padding-right: 0.5em;
+  padding-right: 1em;
+}
+
+.menu li p:hover{
+  transform: scale(1.2);
 }
 
 .menu li img{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   border-radius: 35%;
+  transition: 0.5s;
+}
+
+.menu li img:hover{
+  background: #ccc;
 }
 
 .menuCards{
   display:flex;
 }
 
-h1{
+.menu h1{
+  background: #ccc;
+  background: radial-gradient(#2f8c34, #fafc9e);
   font-family:'Anton', sans-serif; 
   font-size: 4em;
+
+  -webkit-text-fill-color:
+  transparent;
+  -webkit-background-clip: text;
+  background-clip: 0;
 }

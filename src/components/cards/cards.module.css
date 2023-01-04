@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
 .body{
-  background-image: url("./../../imagenes/FondoGif.gif");
+  background-color:#272b33;
   background-size: contain;
   background-position: center top;
   display: flex ;
@@ -13,28 +15,28 @@
 }
 
 .search{
-  height:50px;
-  width:400px;
-  margin:0px auto;
+  flex-direction:column;
+  margin:15px auto; 
 }
 
 
 .button{
   background: rgb(174, 174, 174); /* color de fondo */
   color: #000000; /* color de fuente */
-  border: 2px solid #ffffff; /* tamaño y color de borde */
-  padding: 13px 20px;
+  border: 2px solid #9fffa1; /* tamaño y color de borde */
+  padding: 8px 10px;
   border-radius: 10px; /* redondear bordes */
   position: relative;
   z-index: 1;
   overflow: hidden;
   display: inline-block;
+  margin:5px;
 }
 
 .button:hover {
   color: #1f99b6;
   font-size: 1em;
-  font-family: cursive;
+  font-family: 'Anton', sans-serif;
 }
 .button::after {
   content: "";
@@ -60,8 +62,22 @@
 }
 
 .input{
-  height: 25px;
+  background: #9fffa1;
+  border: solid #272e2a;
+  border-radius: 10%; 
+  height: 30px;
   width: 200px;
+  font-family: 'Comfortaa', cursive;
+}
+.input:hover{
+  background:#33eda0; /* color de fondo hover */
+  height: 30px;
+  width: 200px;
+  border: solid;
+  border-radius: 10%;
+  border-color: #a7c0ff;
+  font-size: medium;
+  font-family:'Comfortaa', cursive;
 }
 
 .search{

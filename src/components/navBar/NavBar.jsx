@@ -22,7 +22,7 @@ const NavBar = () => {
             </NavLink>
           </li>
           <li>
-            <p>Docs</p>
+            <p>Api</p>
           </li>
         </div>
       </ul>
