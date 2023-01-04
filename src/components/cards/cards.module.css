@@ -1,0 +1,76 @@
+.body{
+  background-image: url("./../../imagenes/FondoGif.gif");
+  background-size: contain;
+  background-position: center top;
+  display: flex ;
+  flex-direction: column;
+}
+
+.fondo{
+  height:100px;
+  width:800px;
+  text-align:center;
+}
+
+.search{
+  height:50px;
+  width:400px;
+  margin:0px auto;
+}
+
+
+.button{
+  background: rgb(174, 174, 174); /* color de fondo */
+  color: #000000; /* color de fuente */
+  border: 2px solid #ffffff; /* tamaño y color de borde */
+  padding: 13px 20px;
+  border-radius: 10px; /* redondear bordes */
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.button:hover {
+  color: #1f99b6;
+  font-size: 1em;
+  font-family: cursive;
+}
+.button::after {
+  content: "";
+  background: #b5ff73; /* color de fondo hover */
+  position: absolute;
+  z-index: -1;
+  padding: 16px 20px;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  right: -100%;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+.button:hover::after {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
+.input{
+  height: 25px;
+  width: 200px;
+}
+
+.search{
+  align-items: center;
+}
+
+.conteinerAllCards{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
