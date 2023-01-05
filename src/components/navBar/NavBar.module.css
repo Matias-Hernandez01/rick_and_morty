@@ -29,6 +29,7 @@
   font-size: 30px;
   font-family: 'Anton', sans-serif;
   padding-right: 1em;
+  cursor: pointer;
 }
 
 .menu li p:hover{

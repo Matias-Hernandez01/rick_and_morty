@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Card from '../card/Card';
 import Style from './cards.module.css';
+import { useParams, useNavigate } from 'react-router-dom';
 
 const Cards = () => {
   const [api, setApi] = useState();
+  const navigate = useNavigate();
+  const backToHome = () => navigate('/');
 
   const fetchApi = async () => {
     const response = await fetch(
@@ -17,23 +20,15 @@ const Cards = () => {
     fetchApi();
   }, []);
 
-  const searchCards = (event) => {
-    const value = event.target.value;
-    const resultado = api.filter((personaje) => {
-      if (personaje.name == value) {
-        return personaje;
-      }
-    });
-    return resultado;
-  };
-
   return (
     <div className={Style.body}>
+      <button className={Style.backToHome} onClick={backToHome}>
+        Volver
+      </button>
+
       <div className={Style.search}>
         <input className={Style.input}></input>
-        <button className={Style.button} onClick={searchCards}>
-          Search cards
-        </button>
+        <button className={Style.button}>Search cards</button>
       </div>
       <div className={Style.conteinerAllCards}>
         {api?.map((element) => {
