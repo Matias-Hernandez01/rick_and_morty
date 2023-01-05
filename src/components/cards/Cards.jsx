@@ -17,11 +17,23 @@ const Cards = () => {
     fetchApi();
   }, []);
 
+  const searchCards = (event) => {
+    const value = event.target.value;
+    const resultado = api.filter((personaje) => {
+      if (personaje.name == value) {
+        return personaje;
+      }
+    });
+    return resultado;
+  };
+
   return (
     <div className={Style.body}>
       <div className={Style.search}>
         <input className={Style.input}></input>
-        <button className={Style.button}>Search cards</button>
+        <button className={Style.button} onClick={searchCards}>
+          Search cards
+        </button>
       </div>
       <div className={Style.conteinerAllCards}>
         {api?.map((element) => {
