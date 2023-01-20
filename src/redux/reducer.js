@@ -1,7 +1,8 @@
-import { INCREMENT, DECREMENT, RESET } from './actions';
+import { INCREMENT, DECREMENT, RESET, GET_API } from './actions';
 
 const initialState = {
   stateCount: 0,
+  personajes: [],
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -16,6 +17,12 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         stateCount: state.stateCount - 1,
+      };
+
+    case GET_API:
+      return {
+        ...state,
+        personajes: action.payload,
       };
 
     case RESET:
