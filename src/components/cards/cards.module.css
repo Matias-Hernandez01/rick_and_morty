@@ -15,7 +15,9 @@
 }
 
 .search{
-  flex-direction:column;
+  display: flex;
+  align-content: center;
+  justify-content: center;
   margin:15px auto; 
   height: 50px;
 }
