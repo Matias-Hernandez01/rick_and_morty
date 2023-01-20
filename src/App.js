@@ -2,15 +2,15 @@ import React from 'react';
 import Cards from './components/cards/Cards';
 import NavBar from './components/navBar/NavBar';
 import { Route, Routes } from 'react-router-dom';
-import Count from './components/contador/Count';
+import CardDetail from './components/cardDetail/CardDetail';
 
 function App() {
   return (
     <div>
+      <NavBar />
       <Routes>
-        <Route exact path='/' element={<NavBar />} />
         <Route exact path='/cards' element={<Cards />} />
-        <Route exact path='/count' element={<Count />} />
+        <Route exact path='/cards/:id' element={<CardDetail />} />
       </Routes>
     </div>
   );
