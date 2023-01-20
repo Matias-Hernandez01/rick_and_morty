@@ -1,24 +1,10 @@
-import axios from 'axios';
-export const INCREMENT = 'INCREMENT';
-export const DECREMENT = 'DECREMENT';
-export const RESET = 'RESET';
 export const GET_API = 'GET_API';
+export const GET_INPUT_VALUE = 'GET_INPUT_VALUE';
 
-export const increment = () => {
+export const getInputValue = (value) => {
   return {
-    type: INCREMENT,
-  };
-};
-
-export const decrement = () => {
-  return {
-    type: DECREMENT,
-  };
-};
-
-export const resetear = () => {
-  return {
-    type: RESET,
+    type: GET_INPUT_VALUE,
+    payload: value,
   };
 };
 
