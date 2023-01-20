@@ -1,49 +1,35 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Card from '../card/Card';
 import Style from './cards.module.css';
-// import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { getApi } from '../../redux/actions';
+import { useNavigate } from 'react-router-dom';
 
 const Cards = () => {
-  const [api, setApi] = useState();
-  // const navigate = useNavigate();
-  // const backToHome = () => navigate('/');
-
-  const fetchApi = async () => {
-    const response = await fetch(
-      'https://rickandmortyapi.com/api/character?page=1'
-    );
-    const responseJSON = await response.json();
-    setApi(responseJSON.results);
-  };
+  const dispatch = useDispatch();
+  const getInfo = useSelector((state) => state.personajes);
 
   useEffect(() => {
-    fetchApi();
-  }, []);
+    dispatch(getApi());
+  }, [dispatch]);
 
   return (
     <div className={Style.body}>
-      {/* <button className={Style.backToHome} onClick={backToHome}> */}
-      {/* Volver */}
-      {/* </button> */}
-
-      <div className={Style.search}>
-        <input className={Style.input}></input>
-        <button className={Style.button}>Search cards</button>
+      <div>
+        <button className={Style.button}>Back to home</button>
       </div>
       <div className={Style.conteinerAllCards}>
-        {api?.map((element) => {
-          return (
-            <div key={element.id}>
-              <Card
-                image={element.image}
-                name={element.name}
-                species={element.species}
-                status={element.status}
-                id={element.id}
-              />
-            </div>
-          );
-        })}
+        {getInfo.map((element, index) => (
+          <div key={index}>
+            <Card
+              image={element.image}
+              name={element.name}
+              species={element.species}
+              status={element.status}
+              id={element.id}
+            />
+          </div>
+        ))}
       </div>
     </div>
   );

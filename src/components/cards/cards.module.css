@@ -21,9 +21,9 @@
 }
 
 
-.button{
+.button{  
   background: rgb(174, 174, 174); /* color de fondo */
-  color: #1f99b6; /* color de fuente */
+  color: #00fff2; /* color de fuente */
   border: 2px solid #9fffa1; /* tamaño y color de borde */
   padding: 8px 10px;
   border-radius: 10px; /* redondear bordes */
@@ -31,7 +31,7 @@
   z-index: 1;
   overflow: hidden;
   display: inline-block;
-  margin:5px;
+  margin:15px;
   font-weight: bold;
 }
 
