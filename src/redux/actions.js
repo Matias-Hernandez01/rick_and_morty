@@ -1,10 +1,18 @@
 export const GET_API = 'GET_API';
 export const GET_INPUT_VALUE = 'GET_INPUT_VALUE';
+export const CARDS_DELETE = 'CARDS_DELETE';
 
 export const getInputValue = (value) => {
   return {
     type: GET_INPUT_VALUE,
     payload: value,
+  };
+};
+
+export const cardsDelete = () => {
+  return {
+    type: CARDS_DELETE,
+    payload: id,
   };
 };
 
