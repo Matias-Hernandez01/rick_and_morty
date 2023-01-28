@@ -7,10 +7,10 @@ import CardDetail from './components/cardDetail/CardDetail';
 function App() {
   return (
     <div>
-      <NavBar />
       <Routes>
+        <Route exact path='/' element={<NavBar />} />
         <Route exact path='/cards' element={<Cards />} />
-        <Route exact path='/cards/:id' element={<CardDetail />} />
+        <Route path='/cards/:id' element={<CardDetail />} />
       </Routes>
     </div>
   );
