@@ -1,3 +1,7 @@
+@font-face {
+  font-family:Get Schwifty;
+  src: url("../../../../get_schwifty.ttf")format("truetype");
+}
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
 *{
@@ -5,63 +9,123 @@
 }
 
 .conteiner{
-    background-color:#202124;
-    width: 100%;
-    height: 100px;  
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  justify-content:center;
+  margin: auto;
+  width: 100%;
+  height: 805px;
 }
 
-.menu{
-  display:contents;
-  place-items: center;
-  width: 100%;  
+.header{
+  display: flex;
+  margin: auto;
+  width: 100%;
+}
+
+.containerSection{
+  margin: 0 auto;
+  width: 600px;
+  height: 430px;
+}
+
+.menu{ 
+  width: 100%;
+  display: flex;
 }
 
 .menu li{
-  display: contents;
-  align-items: center;
-}
-
-.menu li p{
-  color: #e8eaed;
-  font-size: 30px;
-  font-family: 'Anton', sans-serif;
-  padding-right: 1em;
-  cursor: pointer;
-}
-
-.menu li p:hover{
-  transform: scale(1.2);
-}
-
-.menu li img{
   display: flex;
-  justify-content: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 25px;
+  font-family: 'Anton', sans-serif;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.containerTile{
+  display: flex;
   align-items: center;
-  width: 90px;
-  height: 90px;
-  border-radius: 35%;
-  transition: 0.5s;
+  justify-content: center;
 }
 
-.menu li img:hover{
-  background: #ccc;
-}
-
-.menuCards{
-  display:flex;
-}
-
-.menu h1{
-  background: #ccc;
-  background: radial-gradient(#2f8c34, #fafc9e);
-  font-family:'Anton', sans-serif; 
-  font-size: 4em;
+.title{
+  display: flex;
+  /* position: relative; */
+  margin: 20px;
+  /* left: 70px;  */
+  background-color: rgb(255, 255, 255);
+  background: radial-gradient(#ebfbeb, #6df25b, #cafcc4);
+  font-family:'Get Schwifty', sans-serif; 
+  font-size: 3.5em;
 
   -webkit-text-fill-color:
   transparent;
   -webkit-background-clip: text;
   background-clip: 0;
+}
+
+.cardsP{
+  /* position: relative; */
+  /* left: 70px;   */
+  display: flex;
+  color: #e8eaed95;
+  font-family: 'Anton', sans-serif;
+  padding-right: 1em;
+  cursor: pointer;
+  text-transform: uppercase;
+  opacity: 1,5;
+}
+
+.api{
+  /* position: relative; */
+  /* left: 60px;  */
+  color: #e8eaed95;
+  font-family: 'Anton', sans-serif;
+  padding-right: 1em;
+  cursor: pointer;
+  text-transform: uppercase;
+  display: flex;  
+}
+
+.cardsP:hover{
+  color: #ffffff;
+}
+
+.api:hover{
+  color: #ffffff;
+}
+
+.section{
+    display: flex;
+    width: 600px;
+    height: 430px;
+}
+
+.section img{
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: .3;
+  transition: .5s ease;
+}
+
+.section img:hover{
+  cursor:crosshair;
+  width: 300px;
+  opacity: 1;
+  filter:contrast(120%)
+}
+
+.linkedin{
+  width: 55px;
+  height: 55px;
+  /* position: relative; */
+  /* left: 300px; */
+}
+
+.github{
+  width: 55px;
+  height: 55px;
+  /* position: relative; */
+  /* left: 350p  x;  */
 }
