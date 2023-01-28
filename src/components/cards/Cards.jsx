@@ -20,34 +20,40 @@ const Cards = () => {
   }, [dispatch]);
 
   return (
-    <div className={Style.body}>
-      <div>
-        <button className={Style.backToHome} onClick={() => navigate('/')}>
-          Back to home
-        </button>
-        <h3>{getInfo.input}</h3>
-        <div className={Style.search}>
-          <input
-            className={Style.input}
-            onChange={(event) => inputChangeHandler(event)}
-          ></input>
-          <button className={Style.button}>Search</button>
-        </div>
-      </div>
-      <div className={Style.conteinerAllCards}>
-        {getInfo.personajes.map((element, index) => (
-          <div key={index}>
-            <Card
-              image={element.image}
-              name={element.name}
-              species={element.species}
-              status={element.status}
-              id={element.id}
-            />
+    <>
+      {!getInfo.personajes.length ? (
+        <p>Aca va el componene a renderizar</p>
+      ) : (
+        <div className={Style.body}>
+          <div>
+            <button className={Style.backToHome} onClick={() => navigate('/')}>
+              Back to home
+            </button>
+            <h3>{getInfo.input}</h3>
+            <div className={Style.search}>
+              <input
+                className={Style.input}
+                onChange={(event) => inputChangeHandler(event)}
+              ></input>
+              <button className={Style.button}>Search</button>
+            </div>
           </div>
-        ))}
-      </div>
-    </div>
+          <div className={Style.conteinerAllCards}>
+            {getInfo.personajes.map((element, index) => (
+              <div key={index}>
+                <Card
+                  image={element.image}
+                  name={element.name}
+                  species={element.species}
+                  status={element.status}
+                  id={element.id}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 
