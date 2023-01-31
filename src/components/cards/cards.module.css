@@ -2,90 +2,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
 .body{
   background-color:#272b33;
-  background-size: contain;
-  background-position: center top;
+  /* background-position: center top; */
   display: flex ;
   flex-direction: column;
 }
 
-.fondo{
-  height:100px;
-  width:800px;
-  text-align:center;
-}
-
-.search{
+.containerHeader{
   display: flex;
-  align-content: center;
-  justify-content: center;
-  margin:15px auto; 
-  height: 50px;
+  height: 80px;
+  align-items: flex-end;
+  justify-content: space-between;
 }
 
-
-.button{  
-  background: rgb(174, 174, 174); /* color de fondo */
-  color: #00fff2; /* color de fuente */
-  border: 2px solid #9fffa1; /* tamaño y color de borde */
-  padding: 8px 10px;
-  border-radius: 10px; /* redondear bordes */
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  display: inline-block;
-  margin:15px;
-  font-weight: bold;
-}
-
-.button:hover {
-  color: #1f99b6;
-  font-size: 1em;
-  font-family: 'Anton', sans-serif;
-}
-.button::after {
-  content: "";
-  background: #b5ff73; /* color de fondo hover */
-  position: absolute;
-  z-index: -1;
-  padding: 16px 20px;
-  display: block;
-  top: 0;
-  bottom: 0;
-  left: 100%;
-  right: -100%;
-  -webkit-transition: all 0.35s;
-  transition: all 0.35s;
-}
-.button:hover::after {
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  -webkit-transition: all 0.35s;
-  transition: all 0.35s;
+.containerSearch{
+  margin-right: 50px;
 }
 
 .input{
-  background: #9fffa1;
+  background: #e5fbe5;
   border: solid #272e2a;
   border-radius: 10%; 
   height: 30px;
   width: 200px;
   font-family: 'Comfortaa', cursive;
+  font-size: 15px;
 }
 .input:hover{
-  background:#33eda0; /* color de fondo hover */
+  background:#ffffff; /* color de fondo hover */
   height: 30px;
   width: 200px;
   border: solid;
   border-radius: 10%;
   border-color: #a7c0ff;
-  font-size: medium;
+  font-size:15px;
   font-family:'Comfortaa', cursive;
 }
+.button{
+  margin: 5px;
+  height: 30px;
+  width: 70px;
+  font-family: "anton", sans-serif;
+  text-transform:uppercase;
+  color: rgb(90, 105, 95);
+}
 
-.search{
-  align-items: center;
+.button:hover{
+  border:#77fe7a solid 2px;
+  color: #ffff;
+  background-color: #1f7c00;
+  font-family: "anton", sans-serif;
 }
 
 .conteinerAllCards{
@@ -94,7 +59,6 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-
 
 
 .backToHome{
@@ -107,7 +71,7 @@
   cursor: pointer;
   border-radius: 5px;
   align-items: center;
-  justify-content: center;  
+  justify-content: center;
   background-position: left;
   background-size: 200% 100%;
   font-weight: bold;
