@@ -22,17 +22,20 @@ const Cards = () => {
   return (
     <>
       <div className={Style.body}>
-        <div>
+        <div className={Style.containerHeader}>
           <button className={Style.backToHome} onClick={() => navigate('/')}>
             Back to home
           </button>
-          <h3>{getInfo.input}</h3>
-          <div className={Style.search}>
+          <div className={Style.containerSearch}>
             <input
               className={Style.input}
+              name='buscarPersonajes'
               onChange={(event) => inputChangeHandler(event)}
+              autoComplete='off'
             ></input>
-            <button className={Style.button}>Search</button>
+            <button className={Style.button} name='buscarPersonajes'>
+              Search
+            </button>
           </div>
         </div>
         <div className={Style.conteinerAllCards}>

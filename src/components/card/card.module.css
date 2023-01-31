@@ -24,10 +24,9 @@
 }
 
 .card:hover{
-  -webkit-transition: all 0.35s;
-    transition: all 0.35s;
-    width: 400px;
-    height: 630px;
+  border-radius: 12px;
+  border:solid #00ff73;
+  background-color: #2599597d;
 }
 
 .card h1{
@@ -38,26 +37,12 @@
   border-color: #202124;
 }
 
-
-.card img{
-  width: 320px;
-}
-
-
-
-.card h2{
-  color: #f5f5f5;
-}
-
-.card h3{
-  color: #f5f5f5;
-}
-
 .containerButtonDelete{
   display: flex;
 }
 
 .buttonDelete{
+  height: 20px;
   margin: 5px;
   border-radius: 10px;
   background-color: black;
@@ -69,4 +54,49 @@
   background-color: red;
 }
 
+.div_info{
+  height: 40px;
+  width: 250px;
+  display: flex;
+}
 
+.div_img{
+  width: 300px;
+  color:rgb(255, 255, 255);
+  display: flex;
+  justify-content:flex-end;
+  align-items: center;
+}
+
+.imgAlive{
+  margin-right: 1em;
+  width: 20px;
+  height: 20px;
+}
+
+.imgDead{
+  margin-right: 1em;
+  width: 20px;
+  height: 20px;
+}
+
+.imgUnknown{
+  margin-right: 1em;
+  width: 20px;
+  height: 20px;
+}
+
+.parrafoAlive{
+  font-size: 15px;
+  color:rgb(35, 255, 35);
+}
+
+.parrafoDead{
+  font-size: 15px;
+  color:rgb(255, 0, 0);
+}
+
+.parrafoUnknown{
+  font-size: 15px;
+  color:yellow;
+}
