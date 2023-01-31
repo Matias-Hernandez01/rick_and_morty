@@ -21,38 +21,25 @@
   width: 100%;
 }
 
-.containerSection{
-  margin: 0 auto;
-  width: 600px;
-  height: 430px;
-}
 
 .menu{ 
   width: 100%;
   display: flex;
+  justify-content: flex-start;
 }
 
 .menu li{
   display: flex;
   color: #ffffff;
   text-transform: uppercase;
-  font-size: 25px;
+  font-size: 25px;  
   font-family: 'Anton', sans-serif;
   cursor: pointer;
   margin: 20px;
 }
 
-.containerTile{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .title{
-  display: flex;
-  /* position: relative; */
   margin: 20px;
-  /* left: 70px;  */
   background-color: rgb(255, 255, 255);
   background: radial-gradient(#ebfbeb, #6df25b, #cafcc4);
   font-family:'Get Schwifty', sans-serif; 
@@ -65,34 +52,34 @@
 }
 
 .cardsP{
-  /* position: relative; */
-  /* left: 70px;   */
-  display: flex;
   color: #e8eaed95;
   font-family: 'Anton', sans-serif;
-  padding-right: 1em;
   cursor: pointer;
   text-transform: uppercase;
   opacity: 1,5;
 }
 
 .api{
-  /* position: relative; */
-  /* left: 60px;  */
   color: #e8eaed95;
   font-family: 'Anton', sans-serif;
-  padding-right: 1em;
   cursor: pointer;
   text-transform: uppercase;
-  display: flex;  
 }
 
 .cardsP:hover{
-  color: #ffffff;
+  color: #98efa4;
+  text-decoration: underline 3px #98efa4;
 }
 
 .api:hover{
-  color: #ffffff;
+  color: #98efa4;
+  text-decoration: underline 3px #98efa4;
+}
+
+.containerSection{
+margin: 0 auto;
+width: 600px;
+height: 430px;
 }
 
 .section{
@@ -115,17 +102,39 @@
   opacity: 1;
   filter:contrast(120%)
 }
+.containerContacto{
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 15px;
+  display: flex;
+  width: 250px;
+  height: 90px;
+}
 
 .linkedin{
   width: 55px;
   height: 55px;
-  /* position: relative; */
-  /* left: 300px; */
 }
 
 .github{
   width: 55px;
   height: 55px;
-  /* position: relative; */
-  /* left: 350p  x;  */
+}
+
+.instagram{
+  width:55px;
+  height: 55px;
+}
+
+.linkedin:hover{
+  width: 60px;
+  height: 60px;
+}
+.github:hover{
+  width: 60px;
+  height: 60px;
+}
+.instagram:hover{
+  width: 60px;
+  height: 60px;
 }
