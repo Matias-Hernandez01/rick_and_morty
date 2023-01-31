@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import style from './NavBar.module.css';
 import linkedin from '../../imagenes/linkedin (1).png';
 import github from '../../imagenes/github.png';
+import instagram from '../../imagenes/instagram.png';
 
 const NavBar = () => {
   return (
@@ -21,17 +22,29 @@ const NavBar = () => {
               href='https://rickandmortyapi.com/api/character'
               target='_blank'
             >
-              Api
+              <p>Api</p>
             </a>
           </li>
-          <li>
-            <img className={style.linkedin} src={linkedin} />
-          </li>
-          <li>
-            <img className={style.github} src={github} />
-          </li>
-          <li></li>
         </ul>
+        <div className={style.containerContacto}>
+          <a
+            href='https://www.linkedin.com/in/matiashernandez00/'
+            target='_blank'
+          >
+            <img
+              className={style.linkedin}
+              href='https://www.linkedin.com/in/matiashernandez00/'
+              src={linkedin}
+              alt='linkedin'
+            />
+          </a>
+          <a href='https://github.com/Matias-Hernandez01' target='_blank'>
+            <img className={style.github} src={github} alt='github' />
+          </a>
+          <a href='https://www.instagram.com/matias.dev/' target='_blank'>
+            <img className={style.instagram} src={instagram} alt='instagram' />
+          </a>
+        </div>
       </div>
       <div className={style.containerSection}>
         <section className={style.section}>
