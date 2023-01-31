@@ -23,7 +23,7 @@ function Card({ name, species, status, image, id }) {
               Delete
             </button>
           ) : (
-            <p></p>
+            <></>
           )}
           <div className={style.div_info}>
             {status === 'Alive' ? (
