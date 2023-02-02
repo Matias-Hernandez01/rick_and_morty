@@ -17,8 +17,9 @@
 
 .header{
   display: flex;
-  margin: auto;
-  width: 100%;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
 }
 
 
@@ -103,27 +104,29 @@ height: 430px;
   filter:contrast(120%)
 }
 .containerContacto{
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-end;
-  margin: 15px;
   display: flex;
-  width: 250px;
+  width: 10%;
   height: 90px;
 }
 
 .linkedin{
   width: 55px;
   height: 55px;
+  margin-right: 20px;
 }
 
 .github{
   width: 55px;
   height: 55px;
+  margin-right: 20px;
 }
 
 .instagram{
   width:55px;
   height: 55px;
+  margin-right: 20px;
 }
 
 .linkedin:hover{
