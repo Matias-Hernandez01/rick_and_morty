@@ -132,15 +132,174 @@
   font-size: 20px;
 }
 
+.divAlive{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #080c08;
+}
+
 .alive{
-
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
 }
 
-.dead{
-
-}
-
-.unknown{
+.statusAlive{
+  color: #0bd845;
+  font-family: monospace;
+  text-transform: uppercase;
+  text-shadow:  0.1em 0.1em#080c08;
   
 }
 
+.divDead{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.statusDead{
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+
+.dead{
+  font-family: monospace;
+  text-shadow:  0.1em 0.1em#080c08;
+  color: red;
+  text-transform: uppercase;
+}
+
+.divUnknown{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.statusUnknown{
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+
+.unknown{
+  color: rgb(255, 255, 0);
+  text-transform: uppercase;
+  text-shadow:  0.1em 0.1em rgba(255, 255, 2, 0.669);
+}
+
+.divHuman{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgHuman{
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+
+.human{
+  color: #0bd845;
+  font-family: monospace;
+  text-shadow:  0.1em 0.1em rgba(0, 0, 0, 0.669);
+  text-transform: uppercase;
+}
+
+.divAlien{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgAlien{
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+
+.alien{
+  color: #ffff00;
+  text-transform: uppercase;
+  font-family: monospace;
+  text-shadow:  0.1em 0.1em rgba(0, 0, 0, 0.669);
+}
+
+.divMale{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgMale{
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+
+.male{
+  text-transform: uppercase;
+  font-family: monospace;
+  text-shadow:  0.1em 0.1em rgba(0, 0, 0, 0.669);
+}
+
+.divFemale{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgFemale{
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+
+.female{
+  text-transform: uppercase;
+  font-family: monospace;
+  text-shadow:  0.1em 0.1em rgba(0, 0, 0, 0.669);
+}
+
+.containerContact{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  height: 20%;
+}
+
+.linkedin{
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
+}
+
+.github{
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
+}
+
+.instagram{
+  width: 80px;
+  height: 80px;
+}
+
+.linkedin:hover{
+  width: 90px;
+  height: 90px;
+}
+
+.github:hover{
+  width: 90px;
+  height: 90px;
+}
+
+.instagram:hover{
+  width: 90px;
+  height: 90px;
+}
