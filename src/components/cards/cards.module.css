@@ -2,20 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
 .body{
   background-color:#272b33;
-  /* background-position: center top; */
   display: flex ;
   flex-direction: column;
 }
 
 .containerHeader{
   display: flex;
-  height: 80px;
-  align-items: flex-end;
-  justify-content: space-between;
+  height: 150px;
 }
 
 .containerSearch{
   margin-right: 50px;
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .input{
@@ -37,6 +38,14 @@
   font-size:15px;
   font-family:'Comfortaa', cursive;
 }
+
+.containerButton{
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .button{
   margin: 5px;
   height: 30px;
