@@ -54,7 +54,6 @@ function Card({ name, species, status, image, id }) {
           <img src={image} alt={name} />
         </Link>
         <h1>{name}</h1>
-        <h2></h2>
       </div>
     </div>
   );
