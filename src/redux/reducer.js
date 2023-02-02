@@ -16,12 +16,7 @@ const rootReducer = (state = initialState, action) => {
     case GET_INPUT_VALUE:
       return {
         ...state,
-        personajes: [...state.personajes].filter((element) =>
-          element.name
-            .toString()
-            .toLowerCase()
-            .includes(action.payload.toLowerCase())
-        ),
+        input: action.payload.toLowerCase(),
       };
 
     case CARDS_DELETE:

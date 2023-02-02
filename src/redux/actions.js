@@ -2,11 +2,18 @@ export const GET_API = 'GET_API';
 export const GET_INPUT_VALUE = 'GET_INPUT_VALUE';
 export const CARDS_DELETE = 'CARDS_DELETE';
 export const CARD_DETAIL = 'CARD_DETAIL';
+export const SEARCH_CARDS = 'SEARCH_CARDS';
 
 export const getInputValue = (value) => {
   return {
     type: GET_INPUT_VALUE,
     payload: value,
+  };
+};
+
+export const SearchCards = () => {
+  return {
+    type: SEARCH_CARDS,
   };
 };
 
