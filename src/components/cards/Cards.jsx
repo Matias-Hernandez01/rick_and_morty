@@ -23,9 +23,11 @@ const Cards = () => {
     <>
       <div className={Style.body}>
         <div className={Style.containerHeader}>
-          <button className={Style.backToHome} onClick={() => navigate('/')}>
-            Back to home
-          </button>
+          <div className={Style.containerButton}>
+            <button className={Style.backToHome} onClick={() => navigate('/')}>
+              Back to home
+            </button>
+          </div>
           <div className={Style.containerSearch}>
             <input
               className={Style.input}
