@@ -1,18 +1,33 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Card from '../card/Card';
 import Style from './cards.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { getApi, getInputValue } from '../../redux/actions';
+import { getApi, searchCards, filterGender } from '../../redux/actions';
 import { useNavigate } from 'react-router-dom';
 
 const Cards = () => {
   const dispatch = useDispatch();
   const getInfo = useSelector((state) => state);
   const navigate = useNavigate();
+  const [input, setInput] = useState('');
+  const [filter, setFilter] = useState('');
+
+  const filterByGender = (event) => {
+    const value = event.target.value;
+    setFilter(value);
+    dispatch(filterGender(filter));
+    console.log(filter);
+  };
 
   const inputChangeHandler = (event) => {
     const inputValue = event.target.value;
-    dispatch(getInputValue(inputValue));
+    setInput(inputValue);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    dispatch(searchCards(input));
+    setInput('');
   };
 
   useEffect(() => {
@@ -28,16 +43,27 @@ const Cards = () => {
               Back to home
             </button>
           </div>
+          <div className={Style.divFilterByGender}>
+            <label htmlFor='filter-by-gender'>Gender</label>
+            <select onChange={filterByGender}>
+              <option value='all'>All</option>
+              <option value='male'>Male</option>
+              <option value='female'>Female</option>
+            </select>
+          </div>
           <div className={Style.containerSearch}>
-            <input
-              className={Style.input}
-              name='buscarPersonajes'
-              onChange={(event) => inputChangeHandler(event)}
-              autoComplete='off'
-            ></input>
-            <button className={Style.button} name='buscarPersonajes'>
-              Search
-            </button>
+            <form onSubmit={handleSubmit}>
+              <input
+                className={Style.input}
+                name='buscarPersonajes'
+                onChange={inputChangeHandler}
+                autoComplete='off'
+                value={input}
+              ></input>
+              <button className={Style.button} type='submit'>
+                Search
+              </button>
+            </form>
           </div>
         </div>
         <div className={Style.conteinerAllCards}>
