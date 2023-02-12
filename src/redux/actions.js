@@ -1,19 +1,20 @@
 export const GET_API = 'GET_API';
-export const GET_INPUT_VALUE = 'GET_INPUT_VALUE';
 export const CARDS_DELETE = 'CARDS_DELETE';
 export const CARD_DETAIL = 'CARD_DETAIL';
 export const SEARCH_CARDS = 'SEARCH_CARDS';
+export const FILTER_GENDER = 'FILTER_GENDER';
 
-export const getInputValue = (value) => {
+export const filterGender = (value) => {
   return {
-    type: GET_INPUT_VALUE,
+    type: FILTER_GENDER,
     payload: value,
   };
 };
 
-export const SearchCards = () => {
+export const searchCards = (value) => {
   return {
     type: SEARCH_CARDS,
+    payload: value,
   };
 };
 
