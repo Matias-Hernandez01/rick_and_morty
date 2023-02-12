@@ -1,9 +1,15 @@
-import { GET_API, GET_INPUT_VALUE, CARDS_DELETE, CARD_DETAIL } from './actions';
+import {
+  GET_API,
+  CARDS_DELETE,
+  CARD_DETAIL,
+  SEARCH_CARDS,
+  FILTER_GENDER,
+} from './actions';
 
 const initialState = {
   personajes: [],
   personajeDetail: {},
-  input: [],
+  filterGender: '',
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -12,11 +18,6 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         personajes: action.payload,
-      };
-    case GET_INPUT_VALUE:
-      return {
-        ...state,
-        input: action.payload.toLowerCase(),
       };
 
     case CARDS_DELETE:
@@ -33,6 +34,28 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         personajeDetail: action.payload,
+      };
+
+    case SEARCH_CARDS:
+      return {
+        ...state,
+        personajes: [
+          ...state.personajes.filter((cards) =>
+            cards.name
+              .toLowerCase()
+              .includes(action.payload.toString().toLowerCase())
+          ),
+        ],
+      };
+
+    case FILTER_GENDER:
+      return {
+        ...state,
+        personajes: [...state.personajes].filter(
+          (personaje) =>
+            personaje.gender.toString().toLowerCase() ===
+              action.payload.toString().toLowerCase() || state.personajes
+        ),
       };
 
     default:
