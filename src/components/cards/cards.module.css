@@ -95,3 +95,19 @@ width: 155px;
 border: 3px solid #77fe7a;
 color:#feffff;
 }
+
+.divFilterByGender{
+  background-color: #1f7c00;
+  color: #ffff;
+  margin: auto;
+  display: grid;
+  gap: 5px;
+}
+
+.divFilterBySpecie{
+  background-color: blue;
+  color: #ffff;
+  margin: auto;
+  display: grid;
+  gap: 5px;
+}
