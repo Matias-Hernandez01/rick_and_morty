@@ -10,6 +10,7 @@ const initialState = {
   personajes: [],
   personajeDetail: {},
   filterGender: '',
+  filterSearch: [],
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -37,15 +38,14 @@ const rootReducer = (state = initialState, action) => {
       };
 
     case SEARCH_CARDS:
+      const search = [...state.personajes];
+      const filterByGender = search.filter((personaje) =>
+        personaje.name.toLowerCase().includes(action.payload.toLowerCase())
+      );
       return {
         ...state,
-        personajes: [
-          ...state.personajes.filter((cards) =>
-            cards.name
-              .toLowerCase()
-              .includes(action.payload.toString().toLowerCase())
-          ),
-        ],
+        personajes:
+          filterByGender.length >= 1 ? filterByGender : state.personajes,
       };
 
     case FILTER_GENDER:

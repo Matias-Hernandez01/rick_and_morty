@@ -9,14 +9,17 @@
 .containerHeader{
   display: flex;
   height: 150px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .containerSearch{
-  margin-right: 50px;
+  margin: 50px;
   width: 80%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  justify-content: space-between;
 }
 
 .input{
@@ -110,4 +113,17 @@ color:#feffff;
   margin: auto;
   display: grid;
   gap: 5px;
+}
+.divButtonReset{
+  background-color: white;
+  width: 90px;
+}
+
+.buttonReset{
+  width: 60px;
+  height: 50px;
+  background-color: #ffffff;
+  color: #000000;
+  opacity: 0.5;
+  border-radius: 5px;
 }

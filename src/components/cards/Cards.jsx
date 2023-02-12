@@ -52,6 +52,14 @@ const Cards = () => {
             </select>
           </div>
           <div className={Style.containerSearch}>
+            <button
+              className={Style.buttonReset}
+              onClick={() => {
+                dispatch(getApi());
+              }}
+            >
+              Reset
+            </button>
             <form onSubmit={handleSubmit}>
               <input
                 className={Style.input}
