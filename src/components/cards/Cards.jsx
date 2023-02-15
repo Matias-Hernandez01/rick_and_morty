@@ -15,8 +15,14 @@ const Cards = () => {
   const filterByGender = (event) => {
     const value = event.target.value;
     setFilter(value);
-    dispatch(filterGender(filter));
-    console.log(filter);
+  };
+
+  const filterChangeHandler = () => {
+    if (!filter.length) {
+      return;
+    } else {
+      dispatch(filterGender(filter));
+    }
   };
 
   const inputChangeHandler = (event) => {
@@ -45,20 +51,15 @@ const Cards = () => {
           </div>
           <div className={Style.divFilterByGender}>
             <label htmlFor='filter-by-gender'>Gender</label>
-            <select onChange={filterByGender}>
+            <select className={Style.optionsFilter} onChange={filterByGender}>
               <option value='all'>All</option>
               <option value='male'>Male</option>
               <option value='female'>Female</option>
             </select>
           </div>
           <div className={Style.containerSearch}>
-            <button
-              className={Style.buttonReset}
-              onClick={() => {
-                dispatch(getApi());
-              }}
-            >
-              Reset
+            <button className={Style.buttonReset} onClick={filterChangeHandler}>
+              Filter
             </button>
             <form onSubmit={handleSubmit}>
               <input
@@ -75,17 +76,35 @@ const Cards = () => {
           </div>
         </div>
         <div className={Style.conteinerAllCards}>
-          {getInfo.personajes.map((element, index) => (
-            <div key={index}>
-              <Card
-                image={element.image}
-                name={element.name}
-                species={element.species}
-                status={element.status}
-                id={element.id}
-              />
-            </div>
-          ))}
+          {getInfo.aux.length ? (
+            <>
+              {getInfo.aux.map((element, index) => (
+                <div key={index}>
+                  <Card
+                    image={element.image}
+                    name={element.name}
+                    species={element.species}
+                    status={element.status}
+                    id={element.id}
+                  />
+                </div>
+              ))}
+            </>
+          ) : (
+            <>
+              {getInfo.personajes.map((element, index) => (
+                <div key={index}>
+                  <Card
+                    image={element.image}
+                    name={element.name}
+                    species={element.species}
+                    status={element.status}
+                    id={element.id}
+                  />
+                </div>
+              ))}
+            </>
+          )}
         </div>
       </div>
     </>
