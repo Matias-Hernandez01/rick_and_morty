@@ -9,8 +9,8 @@ import {
 const initialState = {
   personajes: [],
   personajeDetail: {},
-  filterGender: '',
-  filterSearch: [],
+  aux: [],
+  search: [],
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -38,23 +38,25 @@ const rootReducer = (state = initialState, action) => {
       };
 
     case SEARCH_CARDS:
-      const search = [...state.personajes];
-      const filterByGender = search.filter((personaje) =>
+      const busqueda = [...state.aux].filter((personaje) =>
         personaje.name.toLowerCase().includes(action.payload.toLowerCase())
       );
+      const resultado = [...state.personajes].filter((personaje) =>
+        personaje.name.toLowerCase().includes(action.payload.toLowerCase())
+      );
+
       return {
         ...state,
-        personajes:
-          filterByGender.length >= 1 ? filterByGender : state.personajes,
+        personajes: ![...state.aux].length ? resultado : busqueda,
       };
 
     case FILTER_GENDER:
       return {
         ...state,
-        personajes: [...state.personajes].filter(
+        aux: [...state.personajes].filter(
           (personaje) =>
             personaje.gender.toString().toLowerCase() ===
-              action.payload.toString().toLowerCase() || state.personajes
+            action.payload.toString().toLowerCase()
         ),
       };
 
