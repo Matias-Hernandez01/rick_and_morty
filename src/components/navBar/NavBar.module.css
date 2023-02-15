@@ -9,10 +9,9 @@
 }
 
 .conteiner{
-  justify-content:center;
   margin: auto;
   width: 100%;
-  height: 805px;
+  /* height: 800px; */
 }
 
 .header{
@@ -20,6 +19,7 @@
   align-items: center;
   justify-content: center;
   width: 95%;
+  height: 130px;
 }
 
 
@@ -77,30 +77,26 @@
   text-decoration: underline 3px #98efa4;
 }
 
-.containerSection{
-margin: 0 auto;
-width: 600px;
-height: 430px;
-}
 
 .section{
-    display: flex;
-    width: 600px;
-    height: 430px;
+  display: flex;
+  width: 600px;
+  height: 430px;
 }
 
 .section img{
   width: 0px;
   flex-grow: 1;
   object-fit: cover;
-  opacity: .3;
+  opacity: .6;
   transition: .5s ease;
+  border-radius: 10px;
 }
 
 .section img:hover{
   cursor:crosshair;
   width: 300px;
-  opacity: 1;
+  opacity: 1.4;
   filter:contrast(120%)
 }
 .containerContacto{
@@ -109,6 +105,7 @@ height: 430px;
   display: flex;
   width: 10%;
   height: 90px;
+  background-color: transparent;
 }
 
 .linkedin{
@@ -140,4 +137,51 @@ height: 430px;
 .instagram:hover{
   width: 60px;
   height: 60px;
+}
+
+.containerSectionAndText{
+  width: 95%;
+  margin: 30px;
+  display: inline-flex;
+}
+
+.containerSection{
+margin: 0 auto;
+width: 600px;
+height: 430px;
+}
+
+ .containerDescriptions{
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.647);
+  width: 350px;
+  color: white;
+  border-radius: 10px;
+} 
+
+.reactProyect{
+  background-color: rgba(0, 0, 0, 0.434);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reactProyect, .h3{
+  color: white;
+  opacity: 0.7;
+  font-family: monospace;
+  font-size: 1.5em;
+  padding: 10px;
+  text-transform: SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.reactProyect, .h4{
+  font-family: monospace;
+  font-size: 1.5em;
+  text-transform: SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.react{
+  width: 30px;
+  height: 30px;
 }
