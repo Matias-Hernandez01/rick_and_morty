@@ -5,6 +5,7 @@ export const SEARCH_CARDS = 'SEARCH_CARDS';
 export const FILTER_GENDER = 'FILTER_GENDER';
 
 export const filterGender = (value) => {
+  console.log(value);
   return {
     type: FILTER_GENDER,
     payload: value,
