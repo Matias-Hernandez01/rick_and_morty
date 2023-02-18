@@ -99,45 +99,32 @@
   opacity: 1.4;
   filter:contrast(120%)
 }
-.containerContacto{
+.containerContacto, h3{
+  display: flex; 
   justify-content: center;
-  align-items: flex-end;
-  display: flex;
-  width: 10%;
-  height: 90px;
+  align-items: center;
+  width: 90px;
+  height: 30px;
+}
+
+.aboutme{
+  border: 2px solid gainsboro;
+  cursor:pointer;
+  border-radius: 6px;
   background-color: transparent;
+  color: white;
+  opacity: 0.5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size:15px;
+  text-transform: uppercase;
 }
 
-.linkedin{
-  width: 55px;
-  height: 55px;
-  margin-right: 20px;
+.aboutme:hover{
+  background-color: rgba(255, 217, 0, 0.477);
+  border: solid 2px rgba(172, 255, 47, 0.709);
+  opacity: 1.0;
 }
 
-.github{
-  width: 55px;
-  height: 55px;
-  margin-right: 20px;
-}
-
-.instagram{
-  width:55px;
-  height: 55px;
-  margin-right: 20px;
-}
-
-.linkedin:hover{
-  width: 60px;
-  height: 60px;
-}
-.github:hover{
-  width: 60px;
-  height: 60px;
-}
-.instagram:hover{
-  width: 60px;
-  height: 60px;
-}
 
 .containerSectionAndText{
   width: 95%;
@@ -166,7 +153,7 @@ height: 430px;
   align-items: center;
 }
 
-.reactProyect, .h3{
+.reactProyect {
   color: white;
   opacity: 0.7;
   font-family: monospace;
@@ -175,9 +162,10 @@ height: 430px;
   text-transform: SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
-.reactProyect, .h4{
+.textReact{
+  width: 200px;
   font-family: monospace;
-  font-size: 1.5em;
+  font-size: 1em;
   text-transform: SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
