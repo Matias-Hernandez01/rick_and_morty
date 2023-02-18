@@ -1,0 +1,150 @@
+@font-face{
+  font-family:"miFuente";
+  src: url("../../../fonts/VictorMono-Bold.ttf");
+}
+
+.body{
+  width: 100%;
+  height: 880px;
+  background: rgb(14,143,144);
+  background: linear-gradient(90deg, rgba(14,143,144,1) 0%
+  , rgba(9,9,121,1) 100%);
+}
+
+.containerButtonHome{
+  height: 100px;
+  display: flex;
+  margin-left: 40px;
+  align-items: center;
+}
+
+.buttonHome{
+  width: 40px;
+  height: 40px;
+}
+
+.buttonHome:hover{
+  cursor: pointer;
+  border-radius: 18px;
+  background-color: aquamarine;
+  box-shadow: 0px 0px 10px 5px aquamarine;
+  width: 45px;
+  height: 45px;
+}
+
+.containerImagenDescription{
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.containerImgPerfil{ 
+  background-color: transparent;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+}
+
+.imgPerfil{
+  width: 300px;
+  height: 300px;
+  border-radius: 45%;
+  margin-right: 30px;
+}
+
+.containerNombreDescription{
+  display: inline-block;
+  width: 700px;
+}
+
+.containerName{
+  width: 100%;
+  height: 100px;
+  font-family: "miFuente";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.myName{
+  color: white;
+  text-transform: capitalize;
+  text-shadow: 3px 3px 10px black;
+  font-size: 40px;
+}
+
+.parrafoDescriptionTheProyect{
+  font-family: miFuente;
+  color: grey;
+  text-shadow: 3px 3px 8px black;
+}
+
+.linkHenry{
+  color:rgba(255, 255, 0, 0.545);
+}
+
+.linkHenry:hover{
+  color: yellow;
+}
+
+.containerTecnologias{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: miFuente;
+  font-size:15px;
+}
+
+.tecno{
+  color: white;
+  display: flex;
+  justify-content: center;
+  width: 600px;
+}
+
+/* .tecno:hover{
+  box-shadow: 0px 0px 20px gray,0px 0px 20px gray,0px 0px 20px gray;
+  border-radius: 20px;
+  background-color: rgba(240, 248, 255, 0.242);
+} */
+
+.textTecnologias{
+  text-shadow: 3px 3px 8px black;
+}
+
+.containerIconos{
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divIconos{
+  width: 850px;
+  height: 300px;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px white;
+}
+
+.imgIconos{
+  margin:10px 10px 10px 10px;
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+}
+
+.imgIconos:hover{
+  background-color: #0066ff;
+  box-shadow: 0px 0px 20px #0066ff,0px 0px 20px #0066ff,0px 0px 20px #0066ff;
+  position: relative;
+  bottom: 10px;
+  cursor: pointer;
+}
+
+
