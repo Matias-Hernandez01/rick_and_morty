@@ -8,17 +8,16 @@ import dead from '../../imagenes/Dead.png';
 import unknown from '../../imagenes/Unknown.png';
 
 function Card({ name, species, status, image, id }) {
-  const getPersonajes = useSelector((state) => state.personajes);
+  const getPersonajes = useSelector((state) => state);
   const dispatch = useDispatch();
 
-  const deleteCards = () => {
-    getPersonajes.length > 1 && dispatch(actions.cardsDelete(id));
-  };
+  const deleteCards = () => dispatch(actions.cardsDelete(id));
+
   return (
     <div className={style.container}>
       <div className={style.card}>
         <div className={style.containerButtonDelete}>
-          {getPersonajes.length > 1 ? (
+          {getPersonajes.personajes.length > 1 ? (
             <button className={style.buttonDelete} onClick={deleteCards}>
               Delete
             </button>
