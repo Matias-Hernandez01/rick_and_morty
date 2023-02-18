@@ -1,9 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import style from './NavBar.module.css';
-import linkedin from '../../imagenes/Linkedin.png';
-import github from '../../imagenes/github (1).png';
-import instagram from '../../imagenes/instagram (1).png';
 import react from '../../imagenes/react.png';
 
 const NavBar = () => {
@@ -28,23 +25,9 @@ const NavBar = () => {
           </li>
         </ul>
         <div className={style.containerContacto}>
-          <a
-            href='https://www.linkedin.com/in/matiashernandez00/'
-            target='_blank'
-          >
-            <img
-              className={style.linkedin}
-              href='https://www.linkedin.com/in/matiashernandez00/'
-              src={linkedin}
-              alt='linkedin'
-            />
-          </a>
-          <a href='https://github.com/Matias-Hernandez01' target='_blank'>
-            <img className={style.github} src={github} alt='github' />
-          </a>
-          <a href='https://www.instagram.com/matias.dev/' target='_blank'>
-            <img className={style.instagram} src={instagram} alt='instagram' />
-          </a>
+          <NavLink to='/aboutme'>
+            <h3 className={style.aboutme}>About me</h3>
+          </NavLink>
         </div>
       </div>
       <div className={style.containerSectionAndText}>
@@ -92,9 +75,9 @@ const NavBar = () => {
         </div>
       </div>
       <div className={style.reactProyect}>
-        <h3>React proyect:</h3>
         <img className={style.react} src={react} alt='react' />
-        <p>Matias hernandez</p>
+        <h3 className={style.textReact}>React proyect:</h3>
+        <p className={style.pMatias}>Matias hernandez</p>
       </div>
     </div>
   );
