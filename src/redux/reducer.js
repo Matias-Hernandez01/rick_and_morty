@@ -22,13 +22,13 @@ const rootReducer = (state = initialState, action) => {
       };
 
     case CARDS_DELETE:
+      const deleted = [...state.personajes].filter(
+        (char) => char.id !== action.payload
+      );
       return {
         ...state,
-        personajes: [
-          ...state.personajes.filter(
-            (personajes) => personajes.id !== action.payload
-          ),
-        ],
+        aux: deleted,
+        personajes: deleted,
       };
 
     case CARD_DETAIL:
@@ -38,16 +38,11 @@ const rootReducer = (state = initialState, action) => {
       };
 
     case SEARCH_CARDS:
-      const busqueda = [...state.aux].filter((personaje) =>
-        personaje.name.toLowerCase().includes(action.payload.toLowerCase())
-      );
-      const resultado = [...state.personajes].filter((personaje) =>
-        personaje.name.toLowerCase().includes(action.payload.toLowerCase())
-      );
-
       return {
         ...state,
-        personajes: ![...state.aux].length ? resultado : busqueda,
+        aux: [...state.personajes].filter((personaje) =>
+          personaje.name.toLowerCase().includes(action.payload.toLowerCase())
+        ),
       };
 
     case FILTER_GENDER:
