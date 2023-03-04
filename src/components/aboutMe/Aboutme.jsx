@@ -42,7 +42,7 @@ const Aboutme = () => {
         </div>
         <div className={style.containerTecnologias}>
           <div className={style.tecno}>
-            <h1 className={style.textTecnologias}>Tecnologias utilizadas: </h1>
+            <h1 className={style.textTecnologias}>Tecnologias utilizadas:</h1>
           </div>
         </div>
         <div className={style.containerIconos}>
