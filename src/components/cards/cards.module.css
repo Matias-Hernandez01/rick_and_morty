@@ -32,7 +32,7 @@
   font-size: 15px;
 }
 .input:hover{
-  background:#ffffff; /* color de fondo hover */
+  background:#ffffff; 
   height: 30px;
   width: 200px;
   border: solid;
@@ -117,12 +117,12 @@ color:#feffff;
   width: 55px;
   height: 45px;
   border-radius: 10px;
-  -webkit-transition-duration: 0.4s; /* Safari */
+  -webkit-transition-duration: 0.4s; 
   transition-duration: 0.4s;
 }
 
 .buttonReset:hover {
-  background-color: #4CAF50; /* Green */
+  background-color: #4CAF50;
   color: white;
   cursor: pointer;
 }
