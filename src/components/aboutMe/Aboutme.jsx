@@ -35,7 +35,8 @@ const Aboutme = () => {
                   <b className={style.linkHenry}>Henry</b>
                 </a>
                 . Tomé este proyecto como un desafio para ir aplicando los
-                conocimientos que fuí adquiriendo durante la cursada
+                conocimientos que fuí adquiriendo durante la cursada, aplicando
+                React, Redux y CSS
               </h2>
             </div>
           </div>
