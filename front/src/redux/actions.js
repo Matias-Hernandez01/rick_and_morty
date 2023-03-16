@@ -33,6 +33,7 @@ export const getApi = () => {
       .then((data) => dispatch({ type: GET_API, payload: data.results }));
   };
 };
+
 export const cardDetail = (id) => {
   return (dispatch) => {
     fetch(`https://rickandmortyapi.com/api/character/${id}`)
