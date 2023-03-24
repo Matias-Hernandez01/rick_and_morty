@@ -10,4 +10,4 @@ http
       getCharById(res, id);
     }
   })
-  .listen(PORT, 'localhost'); //Agregamos puerto y localhost
+  .listen(PORT, 'localhost');
