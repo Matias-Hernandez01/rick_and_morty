@@ -22,4 +22,4 @@ const getCharById = (res, id) => {
     );
 };
 
-module.exports = getCharById; //PeticionPorId
+module.exports = getCharById; //export controller
