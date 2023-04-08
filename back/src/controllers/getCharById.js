@@ -22,4 +22,4 @@ const getCharById = (res, id) => {
     );
 };
 
-module.exports = getCharById; //C
+module.exports = getCharById;
