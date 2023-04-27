@@ -23,5 +23,4 @@ const getCharDetail = (res, id) => {
         .end(`The character with the id: ${id}, is not available`)
     );
 };
-
 module.exports = getCharDetail;
