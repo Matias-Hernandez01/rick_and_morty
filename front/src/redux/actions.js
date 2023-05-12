@@ -36,7 +36,7 @@ export const getApi = () => {
 
 export const cardDetail = (id) => {
   return (dispatch) => {
-    fetch(`http://localhost:3001/rickandmorty/detail//${id}`)
+    fetch(`http://localhost:3001/rickandmorty/detail/${id}`)
       .then((response) => response.json())
       .then((data) => dispatch({ type: CARD_DETAIL, payload: data }));
   };
